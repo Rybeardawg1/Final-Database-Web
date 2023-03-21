@@ -13,7 +13,6 @@ body {
   background: rgb(21, 21, 122);
   background: linear-gradient(166deg, rgb(136, 136, 219) 35%, rgba(228, 151, 55, 0.9836309523809523) 100%);
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: 800%;
   background-attachment: fixed;
   -webkit-text-size-adjust: 100%;
@@ -115,6 +114,19 @@ header {
 
 .justify-content-center {
   justify-content: center !important
+}
+
+.left-column {
+  position: absolute;
+  float: left;
+  padding-right: var(--bs-gutter-x, 20rem);
+  padding-left: var(--bs-gutter-x, 20rem);
+}
+
+.right-column {
+  float: right;
+  padding-right: var(--bs-gutter-x, 20rem);
+  padding-left: var(--bs-gutter-x, 20rem);
 }
 
 .center {
@@ -341,4 +353,140 @@ h1 {
   position: relative;
   transform: translateY(40%);
   transition: none;
+}
+
+/* Input for User Credentials */
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid;
+  outline: 0;
+  font-size: 1.3rem;
+  color: rgb(212, 212, 212);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: white;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, rgb(98, 98, 204));
+  border-image-slice: 1;
+}
+
+.form__label:focus {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+:invalid {
+  box-shadow: none;
+}
+
+/* Submit Button */
+
+.wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 2vh;
+  display: flex;
+}
+
+button {
+  font-family: Fredoka;
+  position: relative;
+  display: inline-block;
+  width: 170px;
+  height: 40px;
+  line-height: 1;
+  letter-spacing: 1px;
+  border: 3px solid rgb(136, 136, 219);
+  background: #fff;
+  color: rgb(136, 136, 219);
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: none;
+  transition: all .25s;
+}
+
+button:hover{
+  background: rgb(136, 136, 219);
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button span{
+  opacity: 1;
+  visibility: visible;
+  transition: all .25s;
+}
+
+.success{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .35s;
+}
+
+.success svg{
+  width: 20px;
+  height: 20px;
+  fill: yellowgreen;
+  transform-origin: 50% 50%;
+  transform: translateY(-50%) rotate(0deg) scale(0);
+  transition: all .35s;
+}
+
+button.is_active{
+  width: 40px;
+  height: 40px;
+}
+
+button.is_active .success{
+  opacity: 1;
+  visibility: visible;
+}
+
+button.is_active .success svg{
+  margin-top: 50%;
+  transform: translateY(-50%) rotate(720deg) scale(1);
+}
+
+button.is_active span{
+  opacity: 0;
+  visibility: hidden;
 }
