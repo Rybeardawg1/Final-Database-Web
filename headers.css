@@ -22,7 +22,8 @@ body {
 header {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
+  z-index: 9;
 }
 
 .text-small {
@@ -121,6 +122,11 @@ header {
   float: left;
   padding-right: var(--bs-gutter-x, 20rem);
   padding-left: var(--bs-gutter-x, 20rem);
+}
+
+.link {
+  color:rgb(230, 228, 238); 
+  text-decoration: none;
 }
 
 .right-column {
@@ -410,7 +416,7 @@ h1 {
 
 /* Submit Button */
 
-.wrapper{
+.wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -436,19 +442,19 @@ button {
   transition: all .25s;
 }
 
-button:hover{
+button:hover {
   background: rgb(136, 136, 219);
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-button span{
+button span {
   opacity: 1;
   visibility: visible;
   transition: all .25s;
 }
 
-.success{
+.success {
   position: absolute;
   top: 0;
   left: 0;
@@ -462,7 +468,7 @@ button span{
   transition: all .35s;
 }
 
-.success svg{
+.success svg {
   width: 20px;
   height: 20px;
   fill: yellowgreen;
@@ -471,22 +477,43 @@ button span{
   transition: all .35s;
 }
 
-button.is_active{
+button.is_active {
   width: 40px;
   height: 40px;
 }
 
-button.is_active .success{
+button.is_active .success {
   opacity: 1;
   visibility: visible;
 }
 
-button.is_active .success svg{
+button.is_active .success svg {
   margin-top: 50%;
   transform: translateY(-50%) rotate(720deg) scale(1);
 }
 
-button.is_active span{
+button.is_active span {
   opacity: 0;
   visibility: hidden;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
