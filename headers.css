@@ -125,7 +125,7 @@ header {
 }
 
 .link {
-  color:rgb(230, 228, 238); 
+  color: rgb(230, 228, 238);
   text-decoration: none;
 }
 
@@ -442,7 +442,7 @@ button {
   transition: all .25s;
 }
 
-button:hover {
+button:not(.nohover):hover {
   background: rgb(136, 136, 219);
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -516,4 +516,82 @@ button.is_active span {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* LOGIN & SIGNUP CSS */
+.login {
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  animation: in 1s ease-in;
+  animation: shadow 10s infinite;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 50px 2px rgba(0, 0, 0, .6);
+}
+
+@keyframes in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, .6);
+  }
+
+  20% {
+    box-shadow: 0px -30px 100px 10px rgba(0, 0, 0, .3);
+  }
+
+  40% {
+    box-shadow: 30px 0px 55px 10px rgba(0, 0, 0, .5);
+  }
+
+  60% {
+    box-shadow: 0px 30px 500px 10px rgba(0, 0, 0, .6);
+  }
+
+  80% {
+    box-shadow: -30px 0px 80px 10px rgba(0, 0, 0, .2);
+  }
+
+  100% {
+    box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, .6);
+  }
+}
+
+.letter-spacing {
+  letter-spacing: .1rem;
+}
+
+.letter-spacing:hover {
+  transition: cubic-bezier(0.65, 0, 0.35, 1);
+  letter-spacing: 0.3rem;
+}
+
+.power-wrapper {
+  overflow: hidden;
+  height: 16%;
+}
+
+.power {
+  transform: translateY(-50%);
+}
+
+.power:hover {
+  transition: transform cubic-bezier(0.65, 0, 0.35, 1) .8s;
+  transform: translateY(0);
+}
+
+/* Hide Play button + controls on iOS */
+video::-webkit-media-controls {
+  display: none !important;
+ height: 330px;
+  width: 600px;
+  margin-bottom: 50px;
 }

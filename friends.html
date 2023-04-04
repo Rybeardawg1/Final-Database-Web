@@ -8,6 +8,7 @@
     <title>Friends</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="headers.css" rel="stylesheet">
+    <link href="search.css" rel="stylesheet">
 </head>
 
 <header>
@@ -52,12 +53,10 @@
             <h1>Friends</h1>
         </div>
         <div class="center" style="top: 20%">
-            <div class="box">
-                <form name="search">
-                    <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-                </form>
-                <i class="fas fa-search"></i>
-            </div>
+            <form action="">
+                <input id="myInput" onkeyup="myFunction()" type="search" required>
+                <i class="fa fa-search"></i>
+            </form>
         </div>
         <div class="float-left" style="top: 25%">
 

@@ -5,13 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="headers.css" rel="stylesheet">
+    <script href="script.js"></script>
 </head>
 
 <body>
-    
+    <!-- <video src="./resources/footagecrate-anime-cloudy-top.mov" type="video/mov" muted class="vid center"
+        style="z-index: 9; top: 10%; width: 30%;">
+    </video>
+
+    <script>
+        let clip = document.querySelector(".vid")
+        clip.addEventListener("mouseover", function (e) {
+            clip.play();
+        })
+        clip.addEventListener("mouseout", function (e) {
+            clip.pause();
+        })
+    </script> -->
+    <div class="center power-wrapper" style="top: 15%; font-size: 100pt;">
+        <div class="power">
+            Power!
+            <br>Power!
+        </div>
+    </div>
+    <div class="center login">
+        <div class="form__group field">
+            <input type="input" class="form__field" placeholder="Username" name="username" id='username' />
+            <label for="username" class="form__label">Username</label>
+        </div>
+        <div class="form__group field">
+            <input type="password" class="form__field" placeholder="Password" name="password" id='password' />
+            <label for="password" class="form__label">Password</label>
+        </div>
+        <button class="letter-spacing nohover" style="top: 1rem;">
+            <span>log in</span>
+        </button>
+        <button onclick="location.href = './signup.html';" class="letter-spacing nohover" style="top: 1rem;">
+            <span>sign up</span>
+        </button>
+    </div>
 </body>
 
 </html>
